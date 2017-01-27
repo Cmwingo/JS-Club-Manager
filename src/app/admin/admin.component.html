@@ -1,42 +1,42 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Add New Member to Club</h3>
-  </div>
-  <div class="panel-body">
-    <div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add New Member to Club</h3>
+    </div>
+    <div class="panel-body">
       <div>
-        <label>Member Name:</label>
-        <br>
-        <input #newName>
-      </div>
+        <div>
+          <label>Member Name:</label>
+          <br>
+          <input #newName>
+        </div>
 
-      <div>
-        <label>Character Name:</label>
-        <br>
-        <input #newCharacter>
-      </div>
+        <div>
+          <label>Character Name:</label>
+          <br>
+          <input #newCharacter>
+        </div>
 
-      <div>
-        <label>Character Role:</label>
-        <br>
-        <select #newRole>
-          <option value="Fighter">Fighter</option>
-          <option value="Healer">Healer</option>
-          <option value="Mage">Mage</option>
-          <option value="Rogue">Rogue</option>
-        </select>
-      </div>
+        <div>
+          <label>Character Role:</label>
+          <br>
+          <select #newRole>
+            <option value="Fighter">Fighter</option>
+            <option value="Healer">Healer</option>
+            <option value="Mage">Mage</option>
+            <option value="Rogue">Rogue</option>
+          </select>
+        </div>
 
-      <div>
-        <label>Gaming Interests:</label>
-        <br>
-        <textarea #newInterests></textarea>
-      </div>
+        <div>
+          <label>Gaming Interests:</label>
+          <br>
+          <textarea #newInterests></textarea>
+        </div>
 
-      <button (click)="submitForm(newName.value, newCharacter.value, newRole.value, newInterests.value)">Add</button>
+        <button (click)="submitForm(newName.value, newCharacter.value, newRole.value, newInterests.value)">Add</button>
+      </div>
     </div>
   </div>
-</div>
 <div>
   <app-club-list></app-club-list>
 </div>
