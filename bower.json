@@ -1,0 +1,20 @@
+{
+  "name": "club-manager",
+  "description": "A web app for managing clubs and activities",
+  "main": "",
+  "authors": [
+    "Wingo <cmwingo@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
