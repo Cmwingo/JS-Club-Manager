@@ -1,3 +1,7 @@
-<p>
-  club-list works!
-</p>
+<h2>Geeks of Legend</h2>
+
+<div *ngFor="let member of members | async" (click)="goToDetailPage(member)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{member.name}}</em> playing {{member.character}} : {{member.role}}</h3>
+  </div>
+</div>
