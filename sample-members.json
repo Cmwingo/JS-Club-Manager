@@ -1,0 +1,17 @@
+{ "members": [{
+    "name": "Felicia",
+    "character": "Codex",
+    "role": "Healer",
+    "interests": "My life is so complicated, I really don't have time for much outside of the guild."
+  },{
+    "name": "Sujan",
+    "character": "Zaboo",
+    "role": "Mage",
+    "interests": "Girls, girls, girls!."
+  },{
+    "name": "Herman",
+    "character": "Vork",
+    "role": "Fighter",
+    "interests": "Saving money and leading the guild to victory."
+  }]
+}
