@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Member } from '../member.model';
+import { MemberService } from '../member.service';
 
 @Component({
   selector: 'app-edit-member',
   templateUrl: './edit-member.component.html',
-  styleUrls: ['./edit-member.component.css']
+  styleUrls: ['./edit-member.component.css'],
+  providers: [MemberService]
 })
 export class EditMemberComponent implements OnInit {
+  @Input() selectedMember;
 
-  constructor() { }
+  constructor(private memberService: MemberService) { }
 
   ngOnInit() {
   }
 
+  beginUpdatingMember(memberToUpdate) {
+    this.memberService.updateMember(memberToUpdate);
+  }
+
+  beginDeletingMember(memberToDelete) {
+    if(confirm("Are you sure you want to delete this item from the inventory?")) {
+      this.memberService.deleteMember(memberToDelete);
+    }
+  }
 }

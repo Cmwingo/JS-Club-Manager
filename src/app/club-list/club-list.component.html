@@ -1,7 +1,10 @@
 <h2>Geeks of Legend</h2>
 
-<div *ngFor="let member of members | async" (click)="goToDetailPage(member)" class="panel panel-default">
+<div *ngFor="let member of members | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{member.name}}</em> playing {{member.character}} : {{member.role}}</h3>
+    <h3 (click)="goToDetailPage(member)"><em>{{member.name}}</em> playing {{member.character}} : {{member.role}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <app-edit-member [selectedMember]="member"></app-edit-member>
+    </div>
   </div>
 </div>

@@ -1,3 +1,38 @@
-<p>
-  edit-member works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Edit Member</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Member Name:</label>
+        <br>
+        <input [(ngModel)]="selectedMember.name">
+      </div>
+
+      <div>
+        <label>Character Name:</label>
+        <br>
+        <input [(ngModel)]="selectedMember.character">
+      </div>
+
+      <div>
+        <label>Character Role:</label>
+        <br>
+        <input [(ngModel)]="selectedMember.role">
+      </div>
+
+      <div>
+        <label>Gaming Interests:</label>
+        <br>
+        <input [(ngModel)]="selectedMember.interests">
+      </div>
+      <br>
+      <h6>Update this member</h6>
+      <button (click)="beginUpdatingMember(selectedMember)">Update</button>
+      <hr>
+      <h6>Delete this member</h6>
+      <button (click)="beginDeletingMember(selectedMember)">Delete</button>
+    </div>
+  </div>
+</div>
