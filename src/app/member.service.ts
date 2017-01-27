@@ -18,4 +18,19 @@ export class MemberService {
     this.members.push(newMember);
   }
 
+  getMemberById(memberId: string) {
+    return this.angularFire.database.object('/members/' + memberId);
+  }
+
+  updateMember(localUpdatedMember) {
+    var memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+    memberEntryInFirebase.update({title: localUpdatedMember.title,
+                                  artist: localUpdatedMember.artist,
+                                  description: localUpdatedMember.description});
+  }
+
+  deleteMember(localMemberToDelete) {
+    var memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+    memberEntryInFirebase.remove();
+  }
 }
