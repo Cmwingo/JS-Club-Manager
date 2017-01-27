@@ -19,7 +19,12 @@
       <div>
         <label>Character Role:</label>
         <br>
-        <input [(ngModel)]="selectedMember.role">
+        <select [(ngModel)]="selectedMember.role">
+          <option value="Fighter">Fighter</option>
+          <option value="Healer">Healer</option>
+          <option value="Mage">Mage</option>
+          <option value="Rogue">Rogue</option>
+        </select>
       </div>
 
       <div>
