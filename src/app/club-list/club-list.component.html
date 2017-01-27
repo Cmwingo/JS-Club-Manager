@@ -1,6 +1,15 @@
 <h2>Geeks of Legend</h2>
 
-<div *ngFor="let member of members | async" class="panel panel-default">
+<select (change)="onChange($event.target.value)">
+  <option value="">All Classes</option>
+  <option value="Fighter">Fighters</option>
+  <option value="Healer">Healers</option>
+  <option value="Mage">Mages</option>
+  <option value="Rogue">Rogues</option>
+</select>
+<br><br>
+
+<div *ngFor="let member of members | async | role:filterByRole" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(member)"><em>{{member.name}}</em> playing {{member.character}} : {{member.role}}</h3>
     <div *ngIf="currentRoute === '/admin'">

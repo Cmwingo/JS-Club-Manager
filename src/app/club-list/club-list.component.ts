@@ -13,6 +13,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class ClubListComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByRole: string = " ";
   constructor(private router: Router, private memberService: MemberService) { }
 
   ngOnInit() {
@@ -21,5 +22,9 @@ export class ClubListComponent implements OnInit {
 
   goToDetailPage(clickedMember) {
     this.router.navigate(['members', clickedMember.$key]);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByRole = optionFromMenu;
   }
 }

@@ -12,6 +12,7 @@ import { ClubListComponent } from './club-list/club-list.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
+import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     ClubListComponent,
     AdminComponent,
     EditMemberComponent,
-    MemberDetailComponent
+    MemberDetailComponent,
+    RolePipe
   ],
   imports: [
     BrowserModule,
